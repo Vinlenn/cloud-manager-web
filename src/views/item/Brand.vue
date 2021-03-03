@@ -91,7 +91,7 @@
     methods: {
       getDataFromServer() { // 从服务的加载数的方法。
         // 发起请求
-        this.$http.get("/item/brand/page", {
+        this.$http.get("/item/brand/list", {
           params: {
             key: this.search, // 搜索条件
             page: this.pagination.page,// 当前页
@@ -116,7 +116,7 @@
       },
       editBrand(oldBrand){
         // 根据品牌信息查询商品分类
-        this.$http.get("/item/category/of/brand/?id="+oldBrand.id)
+        this.$http.get("/item/category/of/brand/?bid="+oldBrand.id)
           .then(({data}) => {
             // 修改标记
             this.isEdit = true;

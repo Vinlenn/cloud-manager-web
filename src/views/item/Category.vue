@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-flex xs12 sm10>
-      <v-tree url="/item/of/parent"
+      <v-tree url="/item/category/of/parent"
               :isEdit="isEdit"
               @handleAdd="handleAdd"
               @handleEdit="handleEdit"
